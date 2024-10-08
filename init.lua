@@ -849,18 +849,17 @@ require('lazy').setup({
     -- change the command in the config to whatever the name of that colorscheme is.
     --
     -- If you want to see what colorschemes are already installed, you can use `:Telescope colorscheme`.
-    'ellisonleao/gruvbox.nvim',
+    'marko-cerovac/material.nvim',
     priority = 1000, -- Make sure to load this before all the other start plugins.
     init = function()
-      require('gruvbox').setup {
-        style = 'dark',
-        transparent = false,
-        contrast = 'medium',
-        dark_sidebar = true,
-        dark_float = true,
+      require('material').setup {
+        style = 'darker',
+        disable = {
+          background = true,
+        },
       }
       -- Load the colorscheme here.
-      vim.cmd.colorscheme 'gruvbox'
+      vim.cmd.colorscheme 'material'
       -- You can configure highlights by doing something like:
       vim.cmd.hi 'Comment gui=none'
     end,
