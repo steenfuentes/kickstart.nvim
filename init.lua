@@ -232,10 +232,8 @@ vim.opt.rtp:prepend(lazypath)
 -- NOTE: Here is where you install your plugins.
 require 'custom'
 require('lazy').setup({
-  {
-    'github/copilot.vim',
-  },
-  -- NOTE: Plugins can be added with a link (or for a github repo: 'owner/repo' link).
+  'github/copilot.vim', -- GitHub Copilot
+  'kkoomen/vim-doge', -- Generate code documentation
   'tpope/vim-sleuth', -- Detect tabstop and shiftwidth automatically
 
   -- NOTE: Plugins can also be added by using a table,
